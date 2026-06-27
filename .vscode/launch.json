@@ -8,7 +8,7 @@
             "type": "editor-browser",
             "request": "launch",
             "name": "Open index.html",
-            "url": "file:///Users/ze/Developer/footballWeb/index.html"
+            "url": "file:///Users/ze/Developer/footballWeb/pt/index.html"
         }
     ]
 }

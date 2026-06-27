@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Send Portuguese-speaking visitors to /pt/ on first visit; a manual choice via
+       the language switcher (stored in localStorage) always wins. -->
+  <script>
+    (function () {
+      try {
+        var pref = localStorage.getItem('jf-lang');
+        if (pref === 'en') return;                       // user chose English — stay
+        if (pref === 'pt') { location.replace('pt/'); return; }
+        var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (lang.indexOf('pt') === 0) location.replace('pt/');
+      } catch (e) {}
+    })();
+  </script>
   <title>Just Football ⚽ — The 2026 tournament, nothing else.</title>
   <meta name="description" content="The simplest way to follow the 2026 international football tournament on iPhone and Apple Watch. All 48 teams, all 104 matches, live scores, widgets and Live Activities. No ads. No accounts. No tracking." />
 
@@ -33,7 +46,7 @@
     <nav class="nav-links">
       <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
-      <span class="lang"><strong>EN</strong> · <a href="pt/" hreflang="pt-BR">PT</a></span>
+      <span class="lang"><strong>EN</strong> · <a href="pt/" hreflang="pt-BR" onclick="try{localStorage.setItem('jf-lang','pt')}catch(e){}">PT</a></span>
       <a class="nav-cta" href="https://77a.it/futebol">Download</a>
     </nav>
   </header>
