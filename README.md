@@ -7,12 +7,20 @@ GitHub Pages at **https://zeneto.app**.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Landing page |
-| `privacy.html` | Privacy policy (linked from the App Store) |
-| `styles.css` | All styling (light + dark mode, responsive) |
-| `assets/` | App icon and screenshots |
+| `index.html` | Landing page (English) |
+| `privacy.html` | Privacy policy, English (linked from the App Store) |
+| `pt/index.html` | Landing page (Brazilian Portuguese) |
+| `pt/privacy.html` | Privacy policy (Brazilian Portuguese) |
+| `styles.css` | All styling (light + dark mode, responsive) — shared by both languages |
+| `assets/` | App icon and screenshots (`assets/screenshots/pt/` for pt-BR shots) |
 | `CNAME` | Custom domain for GitHub Pages (`zeneto.app`) |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is (no Jekyll build) |
+
+## Languages
+
+The site is bilingual: English at `/` and Brazilian Portuguese at `/pt/`. Each page
+has a language switcher in the nav and `hreflang` alternate tags so search engines
+serve the right version. To edit copy, change the matching file in each language.
 
 ## Deploy to GitHub Pages
 
