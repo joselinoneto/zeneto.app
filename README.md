@@ -12,7 +12,7 @@ GitHub Pages at **https://zeneto.app**.
 | `pt/index.html` | Landing page (Brazilian Portuguese) |
 | `pt/privacy.html` | Privacy policy (Brazilian Portuguese) |
 | `styles.css` | All styling (light + dark mode, responsive) — shared by both languages |
-| `assets/` | App icon and screenshots (`assets/screenshots/pt/` for pt-BR shots) |
+| `assets/` | App icon and screenshots (`assets/screenshots/en/` and `assets/screenshots/pt/`) |
 | `CNAME` | Custom domain for GitHub Pages (`zeneto.app`) |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is (no Jekyll build) |
 
